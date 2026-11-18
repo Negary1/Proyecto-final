@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="880" viewBox="0 0 1000 880" font-family="Arial, Helvetica, sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2d3748"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="880" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="500" y="22" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a202c">Arquitectura integrada: ETL batch y streaming (ODS 2)</text>
+
+  <!-- Fuentes -->
+  <g>
+    <rect x="80" y="40" width="240" height="60" rx="6" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="1.5"/>
+    <text x="200" y="64" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">Dataset EVA 2019–2025</text>
+    <text x="200" y="84" text-anchor="middle" font-size="11" fill="#2d3748">CSV · MADR / UPRA</text>
+
+    <rect x="380" y="40" width="240" height="60" rx="6" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="1.5"/>
+    <text x="500" y="64" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">Open-Meteo Archive API</text>
+    <text x="500" y="84" text-anchor="middle" font-size="11" fill="#2d3748">Clima diario 2019–2025</text>
+
+    <rect x="680" y="40" width="240" height="60" rx="6" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="1.5"/>
+    <text x="800" y="64" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">DIVIPOLA</text>
+    <text x="800" y="84" text-anchor="middle" font-size="11" fill="#2d3748">Códigos geográficos</text>
+  </g>
+
+  <!-- Airflow -->
+  <g>
+    <rect x="40" y="140" width="920" height="190" rx="8" fill="#f0f7ff" stroke="#2b6cb0" stroke-width="1.5"/>
+    <text x="60" y="162" font-size="13" font-weight="bold" fill="#1a365d">Apache Airflow: ETL batch (etl_ods2_pipeline)</text>
+
+    <!-- Fila EVA -->
+    <rect x="70" y="180" width="150" height="50" rx="5" fill="#ffffff" stroke="#4a5568"/>
+    <text x="145" y="210" text-anchor="middle" font-size="11" fill="#2d3748">Extraer EVA</text>
+    <rect x="250" y="180" width="150" height="50" rx="5" fill="#ffffff" stroke="#4a5568"/>
+    <text x="325" y="210" text-anchor="middle" font-size="11" fill="#2d3748">Validar EVA</text>
+    <rect x="430" y="180" width="150" height="50" rx="5" fill="#ffffff" stroke="#4a5568"/>
+    <text x="505" y="210" text-anchor="middle" font-size="11" fill="#2d3748">Transformar EVA</text>
+    <rect x="610" y="180" width="150" height="50" rx="5" fill="#fef3c7" stroke="#b7791f" stroke-width="1.5"/>
+    <text x="685" y="203" text-anchor="middle" font-size="11" font-weight="bold" fill="#744210">Great Expectations</text>
+    <text x="685" y="219" text-anchor="middle" font-size="10" fill="#744210">validación crítica</text>
+    <rect x="790" y="180" width="150" height="50" rx="5" fill="#ffffff" stroke="#4a5568"/>
+    <text x="865" y="210" text-anchor="middle" font-size="11" fill="#2d3748">Cargar EVA</text>
+
+    <line x1="220" y1="205" x2="250" y2="205" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="400" y1="205" x2="430" y2="205" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="580" y1="205" x2="610" y2="205" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="760" y1="205" x2="790" y2="205" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- Fila Weather -->
+    <rect x="70" y="255" width="150" height="50" rx="5" fill="#ffffff" stroke="#4a5568"/>
+    <text x="145" y="285" text-anchor="middle" font-size="11" fill="#2d3748">Extraer clima</text>
+    <rect x="250" y="255" width="150" height="50" rx="5" fill="#ffffff" stroke="#4a5568"/>
+    <text x="325" y="285" text-anchor="middle" font-size="11" fill="#2d3748">Validar lotes</text>
+    <rect x="430" y="255" width="150" height="50" rx="5" fill="#ffffff" stroke="#4a5568"/>
+    <text x="505" y="285" text-anchor="middle" font-size="11" fill="#2d3748">Transformar clima</text>
+    <rect x="610" y="255" width="150" height="50" rx="5" fill="#fef3c7" stroke="#b7791f" stroke-width="1.5"/>
+    <text x="685" y="278" text-anchor="middle" font-size="11" font-weight="bold" fill="#744210">Great Expectations</text>
+    <text x="685" y="294" text-anchor="middle" font-size="10" fill="#744210">validación crítica</text>
+    <rect x="790" y="255" width="150" height="50" rx="5" fill="#ffffff" stroke="#4a5568"/>
+    <text x="865" y="285" text-anchor="middle" font-size="11" fill="#2d3748">Cargar clima</text>
+
+    <line x1="220" y1="280" x2="250" y2="280" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="400" y1="280" x2="430" y2="280" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="580" y1="280" x2="610" y2="280" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="760" y1="280" x2="790" y2="280" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- Dependencia: clima espera a EVA (dimensión geográfica compartida) -->
+    <path d="M 865 230 L 865 240 L 145 240 L 145 255" fill="none" stroke="#718096" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+    <text x="500" y="236" text-anchor="middle" font-size="9" fill="#4a5568">dimensión geográfica compartida</text>
+  </g>
+
+  <!-- Entradas a Airflow -->
+  <line x1="200" y1="100" x2="145" y2="140" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="500" y1="100" x2="145" y2="140" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="800" y1="100" x2="800" y2="140" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Data Warehouse -->
+  <g>
+    <rect x="40" y="370" width="920" height="120" rx="8" fill="#fffbeb" stroke="#b7791f" stroke-width="1.5"/>
+    <text x="60" y="392" font-size="13" font-weight="bold" fill="#744210">PostgreSQL 16: Data Warehouse</text>
+
+    <rect x="70" y="405" width="200" height="60" rx="5" fill="#ffffff" stroke="#b7791f"/>
+    <text x="170" y="428" text-anchor="middle" font-size="11" font-weight="bold" fill="#2d3748">Dimensiones y hechos batch</text>
+    <text x="170" y="446" text-anchor="middle" font-size="10" fill="#4a5568">comun · eva · weather</text>
+
+    <rect x="290" y="405" width="200" height="60" rx="5" fill="#ffffff" stroke="#b7791f"/>
+    <text x="390" y="428" text-anchor="middle" font-size="11" font-weight="bold" fill="#2d3748">weather.fact_clima_diario</text>
+    <text x="390" y="446" text-anchor="middle" font-size="10" fill="#4a5568">Fuente del productor</text>
+
+    <rect x="510" y="405" width="200" height="60" rx="5" fill="#ffffff" stroke="#b7791f"/>
+    <text x="610" y="428" text-anchor="middle" font-size="11" font-weight="bold" fill="#2d3748">streaming.raw_events</text>
+    <text x="610" y="446" text-anchor="middle" font-size="10" fill="#4a5568">Auditoría de mensajes</text>
+
+    <rect x="730" y="405" width="200" height="60" rx="5" fill="#ffffff" stroke="#b7791f"/>
+    <text x="830" y="428" text-anchor="middle" font-size="11" font-weight="bold" fill="#2d3748">streaming.fact_weather_daily</text>
+    <text x="830" y="446" text-anchor="middle" font-size="10" fill="#4a5568">Eventos válidos</text>
+  </g>
+
+  <!-- Airflow -> DW -->
+  <line x1="505" y1="330" x2="505" y2="370" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="515" y="354" font-size="10" fill="#4a5568">carga</text>
+
+  <!-- Histórico -->
+  <rect x="40" y="530" width="300" height="70" rx="6" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="1.5"/>
+  <text x="190" y="558" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">Dashboard histórico</text>
+  <text x="190" y="578" text-anchor="middle" font-size="11" fill="#2d3748">Power BI · KPIs R1–R5 · batch</text>
+  <line x1="150" y1="490" x2="150" y2="530" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Kafka -->
+  <rect x="380" y="530" width="170" height="70" rx="6" fill="#f0fff4" stroke="#2f855a" stroke-width="1.5"/>
+  <text x="465" y="558" text-anchor="middle" font-size="12" font-weight="bold" fill="#22543d">Productor Python</text>
+  <text x="465" y="578" text-anchor="middle" font-size="10" fill="#2d3748">Replay histórico · Valle del Cauca</text>
+
+  <rect x="580" y="530" width="170" height="70" rx="6" fill="#f0fff4" stroke="#2f855a" stroke-width="1.5"/>
+  <text x="665" y="558" text-anchor="middle" font-size="12" font-weight="bold" fill="#22543d">Kafka topic</text>
+  <text x="665" y="578" text-anchor="middle" font-size="10" fill="#2d3748">ods2.weather.daily · 3 particiones</text>
+
+  <rect x="780" y="530" width="170" height="70" rx="6" fill="#f0fff4" stroke="#2f855a" stroke-width="1.5"/>
+  <text x="865" y="558" text-anchor="middle" font-size="12" font-weight="bold" fill="#22543d">Consumidor Python</text>
+  <text x="865" y="578" text-anchor="middle" font-size="10" fill="#2d3748">Valida contrato · commit manual</text>
+
+  <line x1="550" y1="565" x2="580" y2="565" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="750" y1="565" x2="780" y2="565" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Fact -> Productor -->
+  <line x1="390" y1="465" x2="420" y2="530" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Consumidor -> DW (escribe) -->
+  <line x1="850" y1="530" x2="850" y2="465" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="858" y="500" font-size="10" fill="#4a5568">escribe</text>
+
+  <!-- Métricas -->
+  <rect x="580" y="640" width="370" height="60" rx="6" fill="#fffbeb" stroke="#b7791f" stroke-width="1.5"/>
+  <text x="765" y="662" text-anchor="middle" font-size="12" font-weight="bold" fill="#744210">Vistas de métricas streaming</text>
+  <text x="765" y="682" text-anchor="middle" font-size="10" fill="#2d3748">v_metricas_pipeline · v_eventos_por_minuto · v_avance_simulacion</text>
+  <line x1="865" y1="600" x2="765" y2="640" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Dashboard tiempo real -->
+  <rect x="580" y="750" width="370" height="60" rx="6" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="1.5"/>
+  <text x="765" y="774" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">Dashboard de streaming</text>
+  <text x="765" y="794" text-anchor="middle" font-size="11" fill="#2d3748">Power BI · consulta a PostgreSQL</text>
+  <line x1="765" y1="700" x2="765" y2="750" stroke="#2d3748" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Leyenda -->
+  <g font-size="11" fill="#2d3748">
+    <rect x="40" y="740" width="14" height="14" fill="#fef3c7" stroke="#b7791f"/>
+    <text x="62" y="752">Validación de calidad (GX)</text>
+    <rect x="40" y="764" width="14" height="14" fill="#f0fff4" stroke="#2f855a"/>
+    <text x="62" y="776">Procesamiento streaming (Kafka)</text>
+    <rect x="40" y="788" width="14" height="14" fill="#ebf8ff" stroke="#2b6cb0"/>
+    <text x="62" y="800">Visualización (Power BI)</text>
+  </g>
+
+  <text x="40" y="850" font-size="10" fill="#4a5568">Nota: el streaming reproduce registros históricos de weather.fact_clima_diario para simular la llegada de eventos; no se conecta a sensores en tiempo real.</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjOGU5OWUwNi1hMzM4LTRkYmMtYTcwOS0xODk1ZmYyZDVlMWEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaJXYiue7PCtMA58PT/Gj9awAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpmNTg5MDMxNi1iNjk1LTRkYTktYTliZC1hY2M4OWZhOTcyNjJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo21f44oOOPDOm5Ti7ObfphwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggm/3aEIa3uzBQKRAovScNOl7klK0dc/NNXvXMpUUQ6pKkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaF50ndH7Of+jlQ2oYdcqXswAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIJwNv8d9xpl/ibZ0PUIRFiP8g/vlhvGt9685imdX5id2ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GSxaZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmM4ZTk5ZTA2LWEzMzgtNGRiYy1hNzA5LTE4OTVmZjJkNWUxYS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjhhZmQ0NDBlLWU5NjQtNGJhMy1hODlkLTBlMTEyNTE0NDgyOXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCb/doQhre7MFApECi9Jw06XuSUrR1z801e9cylRRDqkqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggWCJG6je2Ls46pKubqnuFXaGKOlZv1rOuU8et71+77pWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggmKEjWD/AdwLvEq98Xg4fkp2jNlEP9tJe6v0U3d4+dIB0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQMy2uobDXgqXEYjgL7sAZsL2B1mjHgVi9d9LSxEpftLdX20YuxRBiMaNtZFnSpElY2HV6x5Ti39gzJK8jPjo418=</c2pa:manifest></metadata></svg>
